@@ -1,4 +1,4 @@
-package kr.co.sample.web.controller;
+package kr.co.tffp.youtube.web.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
