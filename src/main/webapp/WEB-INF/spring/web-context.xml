@@ -14,7 +14,7 @@
 		<mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
 	</mvc:view-resolvers>
 	
-	<context:component-scan base-package="kr.co.sample.web"/>
+	<context:component-scan base-package="kr.co.tffp.youtube.web"/>
 
 
 </beans>
