@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	 mapper interfate(Dao interface)의 전체 이름(패키지명 + 클래스명)이 namespace로 지정돼 있어야 한다.
+	   * mybatis가 해당 인터페이스를 찾아서 메소드와 일치하는 인터페이스 구현 객체를 생성해준다. 
+	   
+	   수정계획
+ -->
+<mapper namespace="kr.co.jhta.bookstore.dao.UserDao">
+ 	
+</mapper>
