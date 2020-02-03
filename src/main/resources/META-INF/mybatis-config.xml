@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+	<settings>
+		<!-- mybatis는 insert, update SQL 실행 시 null값을 처리하기 위해 
+			 해당 컬럼의 jdbcType을 정의해야만 에러가 발생하지 않는다.
+			 아래와 같이 설정해주면 해당 컬럼의 타입을 매번 정의하지 않아도 NULL값을 안전하게 입력할 수 있다.
+		 -->
+		<setting name="jdbcTypeForNull" value="NULL"/>	
+	</settings>
+	
+   <!-- 
+   		<typeAlias type="kr.co.jhta.bookstore.vo.Book" alias="book"/> 
+   		지정된 패키지의 클래스를 스캔해서 모든 VO 클래스에 대한 별칭을 자동으로 부여한다.
+   		@Alias("별칭")이 없는 경우 클래스이름의 첫글자를 소문자로 변환한 형태로 등록된다.
+    -->	
+	<typeAliases>
+		<package name="kr.co.tffp.youtube.vo"/>
+		<package name="kr.co.tffp.youtube.dto"/>
+	</typeAliases>
+	
+	<!-- 
+		config.xml 또는 spring의 context.xml 둘 중 한 곳만 등록해주면 됨
+		<mappers>
+			<mapper resource="META-INF/mybatis/mappers/books.xml"/>
+		</mappers>
+	 -->
+</configuration>

@@ -10,11 +10,33 @@
 	
 	<mvc:annotation-driven/>
 	
+	<!-- 
+		나중에 만들면 사용
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+				<bean class="kr.co.tffp.youtube.web.interceptor.LoginCheckInterceptor"></bean>
+		</mvc:interceptor>
+		<mvc:interceptor>
+			<mvc:mapping path="/**"/>
+				<bean class="kr.co.tffp.youtube.web.interceptor.GradeCheckInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	 -->
+	
+	
 	<mvc:view-resolvers>
 		<mvc:jsp prefix="/WEB-INF/views/" suffix=".jsp"/>
 	</mvc:view-resolvers>
 	
 	<context:component-scan base-package="kr.co.tffp.youtube.web"/>
-
-
+	
+	
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="defaultEncoding" value="UTF-8"></property><!-- 영문 및 한글 입력 가능 --> 
+	</bean>
+	
+	
+	<context:component-scan base-package="kr.co.tffp.youtube.web.controller"></context:component-scan>
+	<context:component-scan base-package="kr.co.tffp.youtube.web.advice"></context:component-scan>
 </beans>
